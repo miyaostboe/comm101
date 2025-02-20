@@ -21,4 +21,4 @@ ggplot(penguins, aes(x= body_mass_g, y= flipper_length_mm, color = island)) +
   geom_point()
 
 ggplot(penguins, aes(x= body_mass_g, y= flipper_length_mm, color = sex)) +
-  geom_point()
+  geom_path()
