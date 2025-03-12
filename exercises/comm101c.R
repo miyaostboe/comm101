@@ -7,9 +7,10 @@ library(ggplot2)
 # 3) Make the color vary by island
 # 4) Choose a color palette that you enjoy!
 okabe_ito <- c("#56B4E9", "#009E73", "#CC79A7", "#F0E442", "#D55E00")
-ggplot(penguins, aes(island, body_mass_g)) +
+ggplot(penguins, aes(x= island, y= body_mass_g, fill= island)) +
   geom_boxplot() +
-  labs(x= "Island",
-       y= "Body mass (g)") +
-  scale_color_manual(values = okabe_ito) +
+  labs(x= "Island" ,
+       y= "Body mass (g)",
+       fill = "Island") +
+  scale_fill_manual(values = okabe_ito) +
   theme_bw()
